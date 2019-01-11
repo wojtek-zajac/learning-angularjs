@@ -1,8 +1,14 @@
 const myApp = angular.module('myApp', []);
 
-myApp.controller('MainCtrl', ['$scope', function ($scope) {
+myApp.controller('MainCtrl', ['$scope', 'Math', function ($scope, Math) {
 
     $scope.text = 'Hello, Angular fanatic.';
+
+    const a = 12;
+    const b = 24;
+
+    const result = Math.multiply(a, b);
+    console.log(result);
 
 }]);
 
@@ -27,5 +33,11 @@ myApp.directive('customButton', function () {
         link: function (scope, element, attrs) {
             // DOM manipulation/events here! 
         }
+    };
+});
+
+myApp.service('Math', function () {
+    this.multiply = function (x, y) {
+        return x * y;
     };
 });
