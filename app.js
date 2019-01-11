@@ -29,7 +29,7 @@ myApp.controller('UserCtrl', ['$scope', function ($scope) {
 
 myApp.directive('customButton', function () {
     return {
-        restrict: 'A',
+        restrict: 'AE',
         replace: true,
         transclude: true,
         templateUrl: 'templates/customButton.html',
