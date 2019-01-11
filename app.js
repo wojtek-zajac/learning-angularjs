@@ -15,18 +15,6 @@ myApp.controller('MainCtrl', ['$scope', 'Math', 'Server', function ($scope, Math
 
 }]);
 
-myApp.controller('UserCtrl', ['$scope', function ($scope) {
-
-    // Let's namespace the user details
-    // Also great for DOM visual aids too
-    $scope.user = {};
-    $scope.user.details = {
-        "username": "Wojciech Zając",
-        "id": "553312"
-    };
-
-}]);
-
 myApp.controller('FilterCtrl', ['$scope', function ($scope) {
     
     $scope.numbers = [1, 2, 3, 6, 10, 22, 33, 44, 55, 66, 67, 68, 88, 100, 101];
