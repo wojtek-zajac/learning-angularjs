@@ -1,14 +1,16 @@
 const myApp = angular.module('myApp', []);
 
-myApp.controller('MainCtrl', ['$scope', 'Math', function ($scope, Math) {
+myApp.controller('MainCtrl', ['$scope', 'Math', 'Server', function ($scope, Math, Server) {
 
     $scope.text = 'Hello, Angular fanatic.';
 
     const a = 12;
     const b = 24;
-
     const result = Math.multiply(a, b);
     console.log(result);
+
+    const jsonGet = 'https://api.smartrecruiters.com/v1/companies/PIQC/postings';
+    Server.get(jsonGet);
 
 }]);
 
@@ -41,3 +43,14 @@ myApp.service('Math', function () {
         return x * y;
     };
 });
+
+myApp.factory('Server', ['$http', function ($http) {
+    return {
+        get: function(url) {
+            return $http.get(url);
+        },
+        post: function(url) {
+            return $http.post(url);
+        }
+    };
+}]);
