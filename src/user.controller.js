@@ -1,5 +1,4 @@
-
-angular.module('myApp').controller('UserCtrl', ['$scope', function ($scope) {
+myApp.controller('UserCtrl', ['$scope', function ($scope) {
 
     // Namespace the user details first
     $scope.user = {};
