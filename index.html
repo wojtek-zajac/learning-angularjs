@@ -9,6 +9,7 @@
     <script src="./src/user.controller.js"></script>
     <script src="./src/filter.controller.js"></script>
     <script src="./src/bind.controller.js"></script>
+    <script src="./src/http.controller.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -46,6 +47,19 @@
         <div ng-controller="BindCtrl">
             <input type="text" style="width: 250px;" ng-model="superModel" placeholder="Skrobnij sobie coś...">
             <p><strong>{{ superModel }} &#x1f4a3; {{ superModel | reverse }} </strong></p>
+        </div>
+        <hr>
+
+        <div ng-controller="HttpCtrl">
+            <p>Lista lista</p>
+            <ul>
+                <li ng-repeat="posting in postings">
+                    <hr width=30% align="left">
+                    <p>Title: {{ posting.name }}</p>
+                    <p>UUID: {{ posting.uuid }}</p>
+                    <p>Location: {{ posting.location.city }}, {{ posting.location.region }}, {{ posting.location.country }}</p>
+                </li>
+            </ul>
         </div>
     </div>
 </body>
