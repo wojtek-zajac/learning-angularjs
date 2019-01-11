@@ -58,6 +58,7 @@
                     <p>Title: {{ posting.name }}</p>
                     <p>UUID: {{ posting.uuid }}</p>
                     <p>Location: {{ posting.location.city }}, {{ posting.location.region }}, {{ posting.location.country }}</p>
+                    <p>Released Date: {{ posting.releasedDate | date:'MMM d, y h:mm:ss a' }}</p>
                 </li>
             </ul>
         </div>
