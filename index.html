@@ -25,7 +25,19 @@
             <p class="id">User ID: {{ user.details.id }}</p>
         </div>
 
+        <hr>
         <a custom-button>Click me</a>
+        <hr>
+
+        <div ng-controller="FilterCtrl">
+            <p>Type a number to filter for higher numbers</p>
+            <input type="text" ng-model="lowerBound">
+            <ul>
+                <li ng-repeat="number in numbers | filter:greaterThanNum">
+                    {{ number }}
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
