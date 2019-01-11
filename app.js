@@ -3,6 +3,7 @@ const myApp = angular.module('myApp', []);
 myApp.controller('MainCtrl', ['$scope', 'Math', 'Server', function ($scope, Math, Server) {
 
     $scope.text = 'Hello, Angular fanatic.';
+    $scope.greeting = "Wojtek Zając";
 
     const a = 12;
     const b = 24;
@@ -28,7 +29,7 @@ myApp.controller('UserCtrl', ['$scope', function ($scope) {
 
 myApp.directive('customButton', function () {
     return {
-        // restrict: 'A',
+        restrict: 'A',
         replace: true,
         transclude: true,
         templateUrl: 'templates/customButton.html',
@@ -54,3 +55,16 @@ myApp.factory('Server', ['$http', function ($http) {
         }
     };
 }]);
+
+myApp.filter('reverse', function () {
+    return function (input, uppercase) {
+        let out = '';
+        for (let i = 0; i < input.length; i++) {
+            out = input.charAt(i) + out;
+        }
+        if (uppercase) {
+            out = out.toUpperCase();
+        }
+        return out;
+    }
+});

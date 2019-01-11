@@ -12,6 +12,10 @@
     <div ng-app="myApp">
         <div ng-controller="MainCtrl">
             {{ text }}
+            <hr>
+            <p>No filter: {{ greeting }}</p>
+            <p>Reverse: {{ greeting | reverse }}</p>
+            <hr>
         </div>
 
         <div ng-controller="UserCtrl">
