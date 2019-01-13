@@ -52,7 +52,8 @@
 
         <div ng-controller="HttpCtrl">
             <p>Lista lista</p>
-            <ul>
+            <a href="" ng-click="toggle = !toggle">Toggle list</a>
+            <ul ng-show="toggle">
                 <li ng-repeat="posting in postings">
                     <hr width=30% align="left">
                     <p>Title: {{ posting.name }}</p>
