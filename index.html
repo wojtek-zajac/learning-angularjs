@@ -14,6 +14,7 @@
 </head>
 <body>
     <div ng-app="myApp">
+        <!-- scope: MainCtrl -->
         <div ng-controller="MainCtrl">
             {{ text }}
             <hr>
@@ -23,16 +24,20 @@
             <custom-button>Button as an Element</custom-button>
             <hr>
         </div>
+        <!-- /scope: MainCtrl -->
 
+        <!-- scope: UserCtrl -->
         <div ng-controller="UserCtrl">
             <p class="username">Welcome, {{ user.details.username }}</p>
             <p class="id">User ID: {{ user.details.id }}</p>
         </div>
+        <!-- /scope: UserCtrl -->
 
         <hr>
         <a custom-button>Click me</a>
         <hr>
 
+        <!-- scope: FilterCtrl -->
         <div ng-controller="FilterCtrl">
             <p>Type a number to filter for higher numbers</p>
             <input type="text" ng-model="lowerBound">
@@ -42,14 +47,18 @@
                 </li>
             </ul>
         </div>
+        <!-- /scope: FilterCtrl -->
         <hr>
 
+        <!-- scope: BindCtrl -->
         <div ng-controller="BindCtrl">
             <input type="text" style="width: 250px;" ng-model="superModel" placeholder="Skrobnij sobie coś...">
             <p><strong>{{ superModel }} &#x1f4a3; {{ superModel | reverse }} </strong></p>
         </div>
+        <!-- /scope: BindCtrl -->
         <hr>
 
+        <!-- scope: HttpCtrl -->
         <div ng-controller="HttpCtrl">
             <p>{{ postings.length > 0 &&
                 postings[0].company.name + ' postings list' ||
@@ -67,6 +76,7 @@
                 </li>
             </ul>
         </div>
+        <!-- /scope: HttpCtrl -->
     </div>
 </body>
 </html>
