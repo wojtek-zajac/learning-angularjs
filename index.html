@@ -51,7 +51,10 @@
         <hr>
 
         <div ng-controller="HttpCtrl">
-            <p>Lista lista</p>
+            <p>{{ postings.length > 0 &&
+                postings[0].company.name + ' postings list' ||
+                postings[0].company.name + ' has no public postings' }}
+            </p>
             <a href="" ng-click="toggle = !toggle">Toggle list</a>
             <ul ng-show="toggle">
                 <li ng-repeat="posting in postings">
