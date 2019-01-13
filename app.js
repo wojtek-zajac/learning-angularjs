@@ -56,3 +56,17 @@ myApp.filter('reverse', function () {
         return out;
     }
 });
+
+// myApp.config(['$routeProvider', function ($routeProvider) {
+
+//     $routeProvider
+//     .when('/', {
+//         templateUrl: 'views/main.html'
+//     })
+//     .when('/postings', {
+//         templateUrl: 'views/postings.html'
+//     })
+//     .otherwise({
+//         redirectTo: '/'
+//     });
+// }]);
