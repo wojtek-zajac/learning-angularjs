@@ -1,0 +1,24 @@
+{
+  "name": "learning-angularjs",
+  "version": "1.0.0",
+  "description": "Some AngularJS basics",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm i && http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wojtek-zajac/learning-angularjs.git"
+  },
+  "author": "WZ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wojtek-zajac/learning-angularjs/issues"
+  },
+  "homepage": "https://github.com/wojtek-zajac/learning-angularjs#readme",
+  "dependencies": {
+    "angular": "^1.7.5",
+    "http-server": "^0.11.1"
+  }
+}
