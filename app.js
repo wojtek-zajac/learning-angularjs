@@ -45,15 +45,10 @@ myApp.factory('Server', ['$http', function ($http) {
 }]);
 
 myApp.filter('reverse', function () {
-    return function (input, uppercase) {
-        let out = '';
-        for (let i = 0; i < input.length; i++) {
-            out = input.charAt(i) + out;
-        }
-        if (uppercase) {
-            out = out.toUpperCase();
-        }
-        return out;
+    return function (input){
+        return input.split('')
+            .reverse()
+                .join('')
     }
 });
 
