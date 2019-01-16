@@ -14,8 +14,4 @@ myApp.controller('HttpCtrl', ['$scope', '$http', function ($scope, $http) {
         alert('Something went wrong...')
         console.log(response)
     })
-
-    $scope.deletePosting = function (i) {
-        $scope.postings.splice(i, 1)
-    }
 }])
