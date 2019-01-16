@@ -2,6 +2,6 @@
 
 * `nvm use`
 
-* `npm start:dev`
+* `npm run start:dev`
 
 * `http://localhost:8080`
