@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/wojtek-zajac/learning-angularjs#readme",
   "engines": {
-    "node": "11.6.0"
+    "node": "10.15.0"
   },
   "dependencies": {
     "angular": "^1.7.5",
