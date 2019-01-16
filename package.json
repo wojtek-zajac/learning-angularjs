@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
     "start": "npm i && node server.js",
     "start:watch": "npm i && nodemon server.js"
   },
@@ -23,6 +24,8 @@
     "express": "^4.16.4"
   },
   "devDependencies": {
+    "@smartrecruiters/eslint-config": "4.3.0",
+    "eslint": "5.12.0",
     "nodemon": "^1.18.9"
   }
 }
