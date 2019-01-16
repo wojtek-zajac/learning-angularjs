@@ -1,34 +1,25 @@
 {
   "name": "learning-angularjs",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Some AngularJS basics",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "start": "npm i && node server.js",
-    "start:watch": "npm i && nodemon server.js"
+    "start:dev": "npm i && node server.js",
+    "start": "node server.js",
+    "start:watch": "nodemon server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wojtek-zajac/learning-angularjs.git"
-  },
-  "author": "WZ",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/wojtek-zajac/learning-angularjs/issues"
-  },
-  "homepage": "https://github.com/wojtek-zajac/learning-angularjs#readme",
   "engines": {
     "node": "10.15.0"
   },
   "dependencies": {
-    "angular": "^1.7.5",
-    "express": "^4.16.4"
+    "angular": "1.7.5",
+    "express": "4.16.4"
   },
   "devDependencies": {
     "@smartrecruiters/eslint-config": "4.3.0",
     "eslint": "5.12.0",
-    "nodemon": "^1.18.9"
+    "nodemon": "1.18.9"
   }
 }
