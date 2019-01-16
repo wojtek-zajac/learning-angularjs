@@ -5,9 +5,8 @@
   "main": "server.js",
   "scripts": {
     "lint": "eslint .",
-    "start:dev": "npm i && node server.js",
-    "start": "node server.js",
-    "start:watch": "nodemon server.js"
+    "start:dev": "npm i && nodemon server.js",
+    "start": "node server.js"
   },
   "license": "ISC",
   "engines": {
@@ -15,7 +14,8 @@
   },
   "dependencies": {
     "angular": "1.7.5",
-    "express": "4.16.4"
+    "express": "4.16.4",
+    "pug": "2.0.3"
   },
   "devDependencies": {
     "@smartrecruiters/eslint-config": "4.3.0",

@@ -1,0 +1,11 @@
+extends _layout
+
+block scripts
+    script(src="/node_modules/angular/angular.js")
+    script(src="/public/app.js")
+  
+block content
+    main(ng-app="myApp")
+        h1 Postings List
+        a(href="/") Home
+        //- postings-list
