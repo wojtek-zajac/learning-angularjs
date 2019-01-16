@@ -6,57 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="/node_modules/angular/angular.js"></script>
     <script src="/public/app.js"></script>
-    <script src="/public/src/user.controller.js"></script>
-    <script src="/public/src/filter.controller.js"></script>
-    <script src="/public/src/bind.controller.js"></script>
+    <script src="/public/src/main.controller.js"></script>
     <script src="/public/src/http.controller.js"></script>
-    <title>Document</title>
+    <title>Best App Ever</title>
 </head>
 <body>
     <div ng-app="myApp">
         <!-- scope: MainCtrl -->
         <div ng-controller="MainCtrl">
-            {{ text }}
-            <hr>
-            <p>No filter: {{ greeting }}</p>
-            <p>Reverse: {{ greeting | reverse }}</p>
-            <hr>
-            <custom-button>Button as an Element</custom-button>
-            <hr>
+            <h1>{{ title }}</h1>
+            <p>User: {{ user }}</p>
         </div>
         <!-- /scope: MainCtrl -->
 
-        <!-- scope: UserCtrl -->
-        <div ng-controller="UserCtrl">
-            <p class="username">Welcome, {{ user.details.username }}</p>
-            <p class="id">User ID: {{ user.details.id }}</p>
-        </div>
-        <!-- /scope: UserCtrl -->
-
-        <hr>
         <a href="/postings" custom-button>Postings List</a>
-        <hr>
-
-        <!-- scope: FilterCtrl -->
-        <div ng-controller="FilterCtrl">
-            <p>Type a number to filter for higher numbers</p>
-            <input type="text" ng-model="lowerBound">
-            <ul>
-                <li ng-repeat="number in numbers | filter:greaterThanNum">
-                    {{ number }}
-                </li>
-            </ul>
-        </div>
-        <!-- /scope: FilterCtrl -->
-        <hr>
-
-        <!-- scope: BindCtrl -->
-        <div ng-controller="BindCtrl">
-            <input type="text" style="width: 250px;" ng-model="superModel" placeholder="Skrobnij sobie coś...">
-            <p><strong>{{ superModel }} &#x1f4a3; {{ superModel | reverse }} </strong></p>
-        </div>
-        <!-- /scope: BindCtrl -->
-        <hr>
     </div>
 </body>
 </html>
