@@ -1,5 +1,9 @@
 angular.module('myApp.PostingsList', [])
     .component('postingsList', {
+        controller: 'PostingsListCtrl',
         template:
-            '<p>Hello from component</p>'
+            `<ul>
+                <li ng-repeat="posting in postings">
+                    <p>{{ posting.name }}</p>
+            </ul>`
     })
