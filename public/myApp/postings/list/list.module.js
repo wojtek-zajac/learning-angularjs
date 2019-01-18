@@ -1,1 +1,1 @@
-angular.module('myApp.postings', [])
+angular.module('myApp.postings', ['ngResource'])
