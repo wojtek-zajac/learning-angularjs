@@ -1,4 +1,4 @@
-angular.module('myApp.PostingsList', [])
+angular.module('myApp.PostingsList')
     .component('postingsList', {
         controller: 'PostingsListCtrl',
         template:
