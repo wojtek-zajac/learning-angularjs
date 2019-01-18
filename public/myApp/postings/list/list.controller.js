@@ -1,14 +1,15 @@
-angular.module('myApp.PostingsList')
+angular.module('myApp.postings')
     .controller('PostingsListCtrl', PostingsListCtrl)
 
-function PostingsListCtrl($http, $scope) {
+function PostingsListCtrl($http) {
+    const ctrl = this
 
     $http({
         method: 'GET',
         url: 'https://api.smartrecruiters.com/v1/companies/PIQC/postings'
     })
     .then(response => {
-        $scope.postings = response.data.content
+        ctrl.postings = response.data.content
     }, response => {
         /* eslint-disable no-console */
         console.error(response)

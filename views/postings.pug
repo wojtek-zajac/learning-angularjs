@@ -2,13 +2,15 @@ extends _layout
 
 block scripts
     script(src="/node_modules/angular/angular.js")
-    script(src="/public/app.js")
-    script(src="/public/PostingsList/module.js")
-    script(src="/public/PostingsList/controller.js")
-    script(src="/public/PostingsList/component.js")
+    script(src="/public/myApp/app.js")
+    script(src="/public/myApp/postings/list/list.module.js")
+    script(src="/public/myApp/postings/list/list.controller.js")
+    script(src="/public/myApp/postings/list/list.component.js")
+    script(src="/public/myApp/postings/list-item/list-item.component.js")
   
 block content
     main(ng-app="myApp")
         h1 Postings List
         a(href="/") Home
         postings-list
+            list-item
