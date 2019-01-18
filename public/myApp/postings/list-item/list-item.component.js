@@ -4,5 +4,5 @@ angular.module('myApp.postings')
             posting: '<'
         },
         template:
-            `<p>{{ $ctrl.posting.name }}</p>`
+            '<p>{{ $ctrl.posting.name }}</p>'
     })
