@@ -8,9 +8,9 @@ function PostingsListCtrl($resource) {
     resource.get().$promise
         .then(response => {
             ctrl.postings = response.content
-        }, response => {
-            /* eslint-disable no-console */
-            console.error(response)
-            /* eslint-enable no-console */
+        }, () => {
+            /* eslint-disable no-undef */
+            alert('Something went wrong...')
+            /* eslint-enable no-undef */
         })
 }
