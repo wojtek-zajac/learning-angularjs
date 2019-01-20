@@ -10,7 +10,7 @@ function PostingsListCtrl($resource) {
             ctrl.postings = response.content
         }, () => {
             /* eslint-disable no-undef */
-            alert('Something went wrong...')
+            alert('Something went wrong... Please try again later.')
             /* eslint-enable no-undef */
         })
 }
